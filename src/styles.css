@@ -1,0 +1,290 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Header and Dropdown Styling */
+.header {
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+    z-index: 10;
+}
+
+.dropdown-content div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.dropdown-content label {
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.dropdown-content select {
+    flex: 2;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Column Header Styling */
+.column-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+    background-color: #f4f4f4;
+}
+
+.column-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-name {
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+
+.column-count {
+    font-size: 12px;
+    color: #666;
+}
+
+.header-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.add-icon {
+    margin-left: auto;
+}
+
+.options-icon {
+    margin-left: 8px;
+}
+
+/* User Avatar Styling */
+.user-avatar {
+    position: relative;
+    width: 16px;
+   height:16px;
+    background-color: #ffa500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.user-avatar .initials {
+    text-transform: uppercase;
+    padding: 4px;
+}
+
+.user-avatar .availability {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #f4f4f4;
+}
+
+.user-avatar .online {
+    background-color: #4caf50; /* Green */
+}
+
+.user-avatar .offline {
+    background-color: #d3d3d3; /* Gray */
+}
+
+/* Kanban Board Layout */
+.kanban-board {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #f4f4f4;
+}
+
+/* Kanban Column Styling */
+.kanban-column {
+    flex: 1;
+    min-width: 200px;
+    max-width: 220px;
+    background-color: #f4f4f4;
+    padding: 10px;
+   
+   
+}
+
+.kanban-column h2 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* Tickets within Columns */
+.tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Ticket Card Styling */
+.ticket-card {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ticket-id {
+    color: #888;
+}
+
+.ticket-card h5 {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-box-orient: vertical;
+    line-clamp: 2; /* Non-standard, supported only with webkit prefix */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4em;
+    max-height: calc(1.4em * 2); /* Constrains to two lines */
+    white-space: normal;
+    
+}
+.border{
+    border: 1px solid #888;
+    border-radius: 2px;
+}
+
+.ticket-box {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.tags-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #888;
+    margin-right: 5px;
+}
+
+.tags {
+    font-size: 12px;
+    color: #555;
+}
+
+.priority-icon {
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
+.empty-column {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+}
+.status-icon-tagz{
+    margin-right: 5px;
+    width: 12px;
+}
+.top-right-avatar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
