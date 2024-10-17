@@ -1,4 +1,3 @@
-// src/components/ColumnHeader.js
 import React from 'react';
 import AddIcon from '../icons/add.svg';
 import OptionsIcon from '../icons/3 dot menu.svg';

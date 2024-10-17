@@ -1,4 +1,3 @@
-// src/components/KanbanColumn.js
 import React from 'react';
 import TicketCard from './TicketCard';
 import ColumnHeader from './ColumnHeader';
@@ -6,7 +5,7 @@ import UserAvatar from './UserAvatar';
 import { statusIcons, priorityIcons } from '../utils/iconMappings';
 
 const KanbanColumn = ({ title, tickets, type, user,users }) => {
-    // Determine the icon based on type or use UserAvatar for user grouping
+
     const columnIcon = type === 'user' && user 
         ? <UserAvatar name={user.name} available={user.available} /> 
         : type === 'status'

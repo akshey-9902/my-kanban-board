@@ -1,4 +1,4 @@
-// src/utils/api.js
+
 export async function fetchTickets() {
     try {
         const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
@@ -9,6 +9,6 @@ export async function fetchTickets() {
         return data;
     } catch (error) {
         console.error("Failed to fetch tickets:", error);
-        return { tickets: [], users: [] }; // Return empty structure on error
+        return { tickets: [], users: [] }; 
     }
 }

@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useEffect, useState } from 'react';
 import { fetchTickets } from './utils/api';
 import KanbanBoard from './components/KanbanBoard';
@@ -20,12 +19,12 @@ function App() {
         });
     }, []);
 
-    // Save grouping preference to localStorage whenever it changes
+   
     useEffect(() => {
         localStorage.setItem('groupBy', groupBy);
     }, [groupBy]);
 
-    // Save ordering preference to localStorage whenever it changes
+
     useEffect(() => {
         localStorage.setItem('orderBy', orderBy);
     }, [orderBy]);

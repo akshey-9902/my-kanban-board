@@ -1,4 +1,4 @@
-// src/utils/iconMappings.js
+
 
 // Import status icons
 import TodoIcon from '../icons/todo.svg';
@@ -14,7 +14,7 @@ import MediumIcon from '../icons/priority-2.svg';
 import LowIcon from '../icons/priority-1.svg';
 import NoPriorityIcon from '../icons/priority-0.svg';
 
-// Mapping for status icons
+
 export const statusIcons = {
     todo: TodoIcon,
     'in progress': InProgressIcon,
@@ -23,7 +23,7 @@ export const statusIcons = {
     cancelled: CancelledIcon
 };
 
-// Mapping for priority icons
+
 export const priorityIcons = {
     urgent: UrgentIcon,
     high: HighIcon,

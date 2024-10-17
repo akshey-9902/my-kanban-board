@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React, { useState, useEffect, useRef } from 'react';
 import DisplayIcon from '../icons/Display.svg';
 import DownIcon from '../icons/down.svg';
@@ -19,7 +18,6 @@ const Header = ({ groupBy, orderBy, setGroupBy, setOrderBy }) => {
         setOrderBy(e.target.value);
     };
 
-    // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {

@@ -1,4 +1,3 @@
-// src/components/KanbanBoard.js
 import React from 'react';
 import KanbanColumn from './KanbanColumn';
 import { STATUSES, PRIORITY_LEVELS } from '../utils/constants';
@@ -34,7 +33,8 @@ const groupTickets = (tickets, groupBy, orderBy, users) => {
     } else if (groupBy === 'user') {
         groups = users.map(user => user.name);
     } else if (groupBy === 'priority') {
-        groups = Object.values(PRIORITY_LEVELS);
+        
+        groups = ['No priority', 'Urgent', 'High', 'Medium', 'Low'];
     }
 
     const grouped = {};
@@ -59,6 +59,7 @@ const groupTickets = (tickets, groupBy, orderBy, users) => {
         }
     });
 
+    
     Object.keys(grouped).forEach(key => {
         grouped[key].sort((a, b) => {
             if (orderBy === 'priority') {
@@ -70,7 +71,13 @@ const groupTickets = (tickets, groupBy, orderBy, users) => {
         });
     });
 
-    return grouped;
+    
+    const sortedGroups = {};
+    groups.forEach(group => {
+        sortedGroups[group] = grouped[group] || [];
+    });
+
+    return sortedGroups;
 };
 
 export default KanbanBoard;
